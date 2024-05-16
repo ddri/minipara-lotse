@@ -8,13 +8,13 @@ This article is inspired by the need for more Software Engineers in quantum comp
 
 These products and the teams attempting to create them are subject to a long and challenging [journey from "Science to Technology to Engineering to Product"](https://medium.com/@hellodavidryan/how-do-we-think-about-products-in-deep-tech-a-suggested-framework-69e59419a1c6). A series of phase shifts that are more about organisational (and community) evolution than just a linear progression through technology readiness.
 
-This evolution doesn't just happen. For those of us working in these teams, we face the challenge of reinventing the organisation as it shifts from academic to technical to something more broadly engaged with the marketplace. Which means sourcing and collaborating with a growing community of talent as well as continually evolving and growing our own skills.
+This evolution doesn't just happen. For those of us working in these teams, we face the challenge of reinventing the organisation as it shifts from academic to technical to something more broadly engaged with the marketplace. Which means sourcing and collaborating with a growing community of talent and continually evolving and growing our own skills.
 
 ![Diagram showing the key phases of Deep Tech product evolution, with examples of Quantum Computing software relevant to each phase](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/7pqx27s2460p021lrh9x.png)
 
 This was something I touched on in my "[Open Source Your Way into a Quantum Computing Career](https://www.youtube.com/watch?v=sXDva9Etw5A)" talk back in 2022 at the Linux Foundation's Open Source Summit. And it's grown even further in the year or so since, with a noticeable industry shift toward "quantum utility" (a term we use to focus on real-world usefulness rather than [theoretical supremacy](https://www.sciencenews.org/article/google-quantum-supremacy-claim-controversy-top-science-stories-2019-yir)) and some massive projects kicking off. Such as the Australian government's [nearly $1B investment in PsiQuantum](https://www.abc.net.au/news/2024-04-30/australia-signs-deal-for-first-useful-quantum-computer/103781352) setting up a commercial quantum computer back in my home town of Brisbane (said with a little homesickness from here in Seattle).
 
-So yes, there is a lot going on. Which makes this is a very good time to understand what these quantum systems are actually composed of and where your talent and curiosity fits in. I've included some recommendations at the end for how to get involved. And I should add a quick disclaimer that there's not really one "quantum computer" paradigm. I've abstracted the most common elements of the various systems we work on for educational value, but welcome any challenges or rebuttals as this model evolves over time.
+So yes, there is a lot going on. Which makes this a very good time to understand what these quantum systems are actually composed of and where your talent and curiosity fits in. I've included some recommendations at the end for how to get involved. And I should add a quick disclaimer that there's not really one "quantum computer" paradigm. I've abstracted the most common elements of the various systems we work on for educational value, but welcome any challenges or rebuttals as this model evolves over time.
 
 ---
 
@@ -26,7 +26,7 @@ The nuance is a lot more complicated. Such as understanding that a quantum compu
 
 Simulation also plays a crucial role. You might see this talked about as having to do with "saving from expensive hardware purchases", but this isn't really the case (and often a clue someone is just using AI to write their quantum clickbait). We rely on simulation to not only help develop new and interesting algorithms, but to explore the various ways to set up a workload. It's also a core part of the workflows many of us are building towards, where a truly hybrid system would use classical computing resources to handle the workload and scheduling, along with acceleration via GPUs (or newer chips like [TPUs](https://cloud.google.com/blog/products/ai-machine-learning/an-in-depth-look-at-googles-first-tensor-processing-unit-tpu) and [LPUs](https://wow.groq.com/lpu-inference-engine/)), and effectively push certain workloads to the quantum processing unit (QPU) where a quantum algorithm may be useful to the task at hand. While some, like myself, are focused on integrating quantum computing with existing infrastructure, others are dedicated to building the most powerful standalone quantum system. Hence the wide range of exploration in the industry.
 
-If all you take away from this is that a quantum computer is a specialised system that includes a QPU in additional to the existing compute stack to run specialised quantum algorithms then that's a win. No cats, slits, or spooky hand-waving required.
+If all you take away from this is that a quantum computer is a specialised system that includes a QPU in addition to the existing compute stack to run specialised quantum algorithms then that's a win. No cats, slits, or spooky hand-waving required.
 
 ![Diagram showing the key layers of a Quantum Computing software and system stack](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/kgfctakucec19xef1azl.png)
 
@@ -57,7 +57,7 @@ There is some blurring of the distinction between SDKs and frameworks and Integr
 
 Moving down the stack we come to the algorithms at the heart of any desired quantum workload. As the various competing approaches to creating quantum computers improve, so do the opportunities for real-world applications. A range of software libraries and packages are being built towards specific functional areas of use (such as [IBM's Qiskit Machine Learning](https://github.com/qiskit-community/qiskit-machine-learning) for quantum machine learning or [Google's OpenFermion](https://quantumai.google/openfermion) for quantum chemistry), and the existing libraries of known quantum algorithms are being extended and optimised by researchers and commercial vendors (such as [Stephen Jordan's Quantum Algorithm Zoo](https://quantumalgorithmzoo.org/) and [Classiq's library](https://github.com/Classiq/classiq-library)).
 
-Some quantum algorithms have achieved near-celebrity status. Others are quantum adaptations of classical algorithms or serve as building blocks for larger workloads. There are even some quantum algorithms that are functionally useless in the real world (insert a joke about physicists here if you dare), but are important examples of quantum advantage. For a deeper dive, refer to my feature on quantum algorithms, but here are some notable examples.
+Some quantum algorithms have achieved near-celebrity status. Others are quantum adaptations of classical algorithms or serve as building blocks for larger workloads. There are even some quantum algorithms that are functionally useless in the real world (insert a joke about physicists here if you dare), but are important examples of quantum advantage. For a deeper dive, see my feature on quantum algorithms, but here are some notable examples.
 
 - [Shor's Algorithm](https://www.classiq.io/insights/shors-algorithm-explained), known for its potential to break encryption, is proposed to factor large numbers exponentially faster than classical algorithms.
 - [Grover's Search Algorithm](https://www.classiq.io/insights/grovers-algorithm) offers a starting point for accelerating unstructured data searches.
@@ -85,7 +85,7 @@ Quantum simulators are the software tools used to replicate the behaviour of qua
 
 Before we move further down the stack we need to make a small side note on the topic of quantum cloud platforms. In the current era there are a handful of major vendors with a few hardware systems in operation. Each faces the same question of whether to attempt to sell hardware units directly, host on their own campus, sell access via the internet, or some combination of the above. And then add private interconnects, public cloud vendors, sovereign capability and research labs to the mix. It's not a given that the cloud platform model will prove to be the defining economic model for quantum computing, although it occupies the greatest mindshare from outside of the sector given the patterns of cloud computing that came prior.
 
-Having said all of that, pay attention also to the companies who choose not to provision their systems for cloud platform access. At [Quantum Brilliance](https://quantumbrilliance.com/) my focus was on highly-parallelised edge-compute clusters using the diamond NV-center approach that enables small form factor and room-temperature QPUs (with the first [deployed at the Pawsey Supercomputing Centre in Australia](https://youtu.be/IR-bYQA1TIg?si=xQpGnN2Ha267z9XF)). In speaking with other quantum startups, the use cases for all forms of fixed or mobile deployment seem to apply, and there's a lot of interesting (and often undisclosed) work being done away from the web. Among those accessible online, here are some to watch.
+Having said all of that, pay attention also to the companies who choose not to provision their systems for cloud platform access. At [Quantum Brilliance](https://quantumbrilliance.com/) my focus was on highly-parallelised edge-compute clusters using the diamond NV-centre approach that enables small form factor and room-temperature QPUs (with the first [deployed at the Pawsey Supercomputing Centre in Australia](https://youtu.be/IR-bYQA1TIg?si=xQpGnN2Ha267z9XF)). In speaking with other quantum startups, the use cases for all forms of fixed or mobile deployment seem to apply, and there's a lot of interesting (and often undisclosed) work being done away from the web. Among those accessible online, here are some to watch.
 
 - [IBM Quantum Experience](https://www.ibm.com/quantum)
 - [Amazon Braket](https://aws.amazon.com/braket/)
@@ -106,14 +106,14 @@ To simplify this example stack, we will roll into this level the various forms o
 - [Quantinuum TKET](https://github.com/CQCL/tket)
 - [inQWIRE SQIR and VOQC](https://github.com/inQWIRE/SQIR)
 - [Rigetti Quil Compiler](https://pyquil-docs.rigetti.com/en/stable/compiler.html)
-- [Berkleley Quantum Synthesis Toolkit](https://bqskit.lbl.gov/)
+- [Berkeley Quantum Synthesis Toolkit](https://bqskit.lbl.gov/)
 - [Microsoft QDK Compiler](https://github.com/microsoft/qsharp/tree/main/compiler/qsc)
 
 ---
 
 ### 6. Quantum error correction software
 
-The role of quantum error correction in the current era of ["noisy" quantum systems](https://q-ctrl.com/topics/what-is-nisq-computing) is especially important. To the point that there are companies specialising in this layer of the stack. The need for these companies and the wider error correction effort is due to the fragile nature of quantum systems. While superconducting quantum computers dominate popular imagination, error correction is vital across all methods (trapped ion, photonic, NV center, etc.).
+The role of quantum error correction in the current era of ["noisy" quantum systems](https://q-ctrl.com/topics/what-is-nisq-computing) is especially important. To the point that there are companies specialising in this layer of the stack. The need for these companies and the wider error correction effort is due to the fragile nature of quantum systems. While superconducting quantum computers dominate popular imagination, error correction is vital across all methods (trapped ion, photonic, NV-centre, etc.).
 
 Regardless of qubit generation method, challenges arise in preparation, workload execution, and measurement. [Decoherence](https://www.scientificamerican.com/blog/observations/decoherence-is-a-problem-for-quantum-computing-but/) affects all methods, along with gate errors, measurement errors, and individual qubit quality. Quantum error correction is understandably complex, but can incorporate techniques such as system redundancy (spreading the quantum information across multiple qubits), syndrome management (using ancillary qubits to detect errors without disturbing the encoded information), and profiling the performance of individual or clustered qubits over time. While these will still be important if the era of truly fault-tolerant quantum computing is achievable, they are an exciting topic of research in the present Noisy Intermediate-Scale Quantum (NISQ) era we find ourselves in. Major vendors and examples include the following.
 
@@ -127,7 +127,7 @@ Regardless of qubit generation method, challenges arise in preparation, workload
 
 ### 7. Quantum control systems
 
-The quantum control system is responsible for managing and controlling the operations of the quantum hardware. It handles tasks at the hardware level such as calibration, pulse shaping, and qubit control. Given the different forms of quantum computing being developed, and the range of implementations of monolithic or networked quantum systems, we can consider the term "quantum control system" to be inclusive rather than specific. Likewise there is no hard and fast definition of a "quantum operating system".
+The quantum control system is responsible for managing and controlling quantum hardware operations. It handles tasks at the hardware level such as calibration, pulse shaping, and qubit control. Given the different forms of quantum computing being developed, and the range of implementations of monolithic or networked quantum systems, we can consider the term "quantum control system" to be inclusive rather than specific. Likewise there is no hard and fast definition of a "quantum operating system".
 
 This will likely change over time as the phase of development moves from the ["Science to Technology" phases and into "Engineering to Product"](https://medium.com/@hellodavidryan/how-do-we-think-about-products-in-deep-tech-a-suggested-framework-69e59419a1c6). Especially where closer alignment with existing product patterns and the terminology of the users and/or marketplace are desirable. For the most part, the control system will be an internal resource (something between an OS and firmware) but the following vendors and products are notable.
 
@@ -143,7 +143,7 @@ The final layer in our stack is the quantum hardware itself. It's useful to reme
 
 The hardware layer is what many think of when they hear the term "quantum computing", much in the same way that the early tube and valve computing devices defined the terminology and language by sheer force of mechanical interaction. Switches and punch cards gave way to instructions and programs over time, in turn being extended by memory and storage, and then connected by networks and servers.
 
-These patterns are present in the research and development of quantum devices, and as we can see from the above, the layers of an example quantum stack provide opportunity for existing expertise at each layer to provide new and interesting ideas. Hopefully in new ways we might never have considered, given the nuance that each underlying technology and layer in the stack provides.
+These patterns are present in the research and development of quantum devices. As we can see from the above, the layers of an example quantum stack provide opportunity for existing expertise at each layer to provide new and interesting ideas. Hopefully in new ways we might never have considered, given the nuance that each underlying technology and layer in the stack provides.
 
 ---
 
