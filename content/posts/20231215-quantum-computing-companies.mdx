@@ -4,7 +4,7 @@ date: 2023-12-15
 draft: false
 ---
 
-# Purpose
+## Purpose
 
 This is a review of the notes I've taken about quantum computing companies throughout the year (2023). I've included links to what I feel are the notable paper published by these companies. Neither the listing nor the papers is considered thorough or anything other than my own perspectives as a technical product manager in the industry who tries to keep up with the market and announcements. It's been a great year and I've enjoyed getting to know more teams across these organisations since leaving Quantum Brilliance. A trend I hope continues into and through 2024.
 
@@ -36,12 +36,16 @@ Alpine Quantum Technologies (AQT) is an Austrian company spun out from the Unive
 Atom Computing uses optically trapped neutral atoms as qubits, allowing it to operate at room temperature. Their technology uses lasers to trap and manipulate individual atoms, allowing for precise control and measurement. One of the key advantages of Atom Computing's approach is the potential for creating large arrays of qubits with long coherence times. Their first-generation machine, Phoenix, already claims 100 qubits, and the company has ambitious plans for rapid scaling.
 - trapped neutral atoms
 - https://atom-computing.com/
-
+- Notable Papers:
+    - [Mid-circuit qubit measurement and rearrangement in a 171Yb atomic array](https://arxiv.org/abs/2305.19119)
+    - [Assembly and coherent control of a register of nuclear spin qubits](https://arxiv.org/abs/2108.04790v1)
 
 ### AWS Braket
 Amazon Web Services (AWS) Braket is not a quantum hardware manufacturer, but rather a quantum computing service that provides access to different types of quantum hardware through the cloud. AWS Braket provides a unified development environment for building quantum algorithms and testing them on a range of quantum hardware from providers like D-Wave, IonQ, and Rigetti. This multi-hardware approach is valuable because different quantum computing technologies have different strengths and are at different stages of development. By providing access to various systems, AWS Braket enables users to compare and choose the best hardware for their specific problems. The service also includes classical quantum simulators, allowing users to test and debug quantum algorithms before running them on actual quantum hardware.
 - quantum computing platform
 - https://aws.amazon.com/braket/
+- Notable Papers:
+    - [Quantum-Informed Recursive Optimization Algorithms](https://arxiv.org/pdf/2308.13607)
 
 ### Bleximo
 Develops superconducting quantum processors for specific industry applications. They are a California-based startup developing application-specific quantum processors. They use superconducting qubit technology, similar to that used by Google and IBM, but tailor their processors for specific industry applications such as quantum chemistry simulations for drug discovery or optimization problems in finance. This focused approach allows Bleximo to optimize their hardware for particular types of quantum algorithms, potentially achieving practical quantum advantage in specific domains sooner than general-purpose machines. Bleximo's quantum processors operate at extremely low temperatures, requiring specialized cooling systems.
@@ -58,6 +62,11 @@ ColdQuanta specializes in cold atom technology, using ultra-cold atoms for quant
 D-Wave is known for producing quantum annealing systems, a specialized type of quantum computer optimized for solving certain classes of optimization problems. Unlike gate-based quantum computers, D-Wave's systems use quantum fluctuations to find low-energy states of a problem, which correspond to optimal or near-optimal solutions. While not universal quantum computers, D-Wave's systems have found applications in areas like logistics, finance, and materials science.
 - quantum annealing
 - https://www.dwavesys.com/
+
+### Entropica labs
+
+- Notable Papers:
+    - [Multi-Objective Optimization and Network Routing with Near-Term Quantum Computers](https://arxiv.org/abs/2308.08245)
 
 
 ### Google Quantum AI
@@ -88,6 +97,12 @@ Microsoft's quantum efforts are two-fold. First, they provide a cloud platform, 
 OQC is a UK-based company that builds superconducting quantum computers. They've developed a unique qubit architecture called the "coaxmon," which aims to simplify the design and improve the scalability of superconducting quantum processors. OQC provides access to their quantum computers through cloud services.
 - superconducting qubits
 - https://oxfordquantumcircuits.com/
+
+
+### ParityQC
+ParityQC is an Austrian quantum computing company that specializes in quantum optimization and quantum architecture design. They aim to develop efficient quantum computing architectures and algorithms, particularly for optimization problems. The company was established in 2020 by Wolfgang Lechner and Magdalena Hauser, and have shipped thevParity Quantum Computing architecture, also known as the LHZ architecture (named after Wolfgang Lechner, Philipp Hauke, and Peter Zoller who invented it). This architecture is designed to be particularly efficient for solving optimization problems.
+- quantum software and blueprint design
+- https://parityqc.com
 
 
 ### PASQAL
