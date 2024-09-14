@@ -1,5 +1,5 @@
 const CONFIG = {
-    title: "Minimum Viable Paragraph",
+    title: "Lotse",
     baseURL: "https://lotse.vercel.app",
     darkBackground: "#1a1a1a",
 };
